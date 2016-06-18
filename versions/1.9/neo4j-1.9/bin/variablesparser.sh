@@ -39,7 +39,7 @@ then
 fi
 
 export JAVA_OPTS="$JAVA_OPTS $confresult"
-source /opt/tomcat/conf/memoryConfig.sh
+source /opt/repo/versions/${Version}/neo4j-${Version}/bin/memoryConfig.sh
 
 [ "$DEBUG" -eq 1 ] && {
     echo "confresult=$confresult"
