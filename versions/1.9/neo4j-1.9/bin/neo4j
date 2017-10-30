@@ -73,7 +73,7 @@ source bin/utils
 parseConfig
 
 . ${OPENSHIFT_NEO4J_DIR}/versions/${Version}/neo4j-${Version}/bin/variablesparser.sh;
-JAVA_OPTS="-server -Djava.net.preferIPv4Stack=true -XX:+DisableExplicitGC ${wrapper_java_additional} $JAVA_OPTS"
+JAVA_OPTS="-server -Djava.net.preferIPv4Stack=false -XX:+DisableExplicitGC ${wrapper_java_additional} $JAVA_OPTS"
 
 #NEO4J_SERVER_PORT=`( egrep "^org.neo4j.server.webserver.port" $NEO4J_INSTANCE/conf/neo4j-server.properties || echo 7474 ) | sed -e 's/.*=//'`
 NEO4J_SERVER_PORT=${org_neo4j_server_webserver_port:=7474}
